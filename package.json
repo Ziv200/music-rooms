@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "GITHUB_PAGES=true next build && rm -rf out/project-media/_originals_with_audio out/project-media/_oversized_excluded out/project-media/_duplicates_removed out/_analysis && touch out/.nojekyll && npx --yes gh-pages@6 -d out -b gh-pages --no-history"
+    "deploy": "GITHUB_PAGES=true next build && rm -rf out/project-media/_originals_with_audio out/project-media/_oversized_excluded out/project-media/_duplicates_removed out/_analysis && touch out/.nojekyll && rm -f out/.gitignore && npx --yes gh-pages@6 -d out -b gh-pages --no-history --dotfiles"
   },
   "dependencies": {
     "@types/canvas-confetti": "^1.9.0",
