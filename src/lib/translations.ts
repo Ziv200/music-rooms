@@ -7,6 +7,7 @@ export const translations = {
     brandFull: "Ilan Ziv Music & Sound Services",
     nav: {
       offer: "Offer",
+      tour: "The room",
       work: "Work",
       contact: "Contact",
       langSwitch: "עברית",
@@ -70,7 +71,7 @@ export const translations = {
             "Simple on/off and saved room setups",
             "Grows in modules as the program grows",
             "Built for therapists, teachers, and staff",
-            "Less juggling of separate boxes and remotes",
+            "Lighting and room modes from a tablet",
           ],
         },
         {
@@ -98,6 +99,13 @@ export const translations = {
           ],
         },
       ],
+    },
+    tour: {
+      sectionLabel: "The room",
+      title: "A short walk through",
+      subtitle:
+        "Muted walkthrough with brief labels — lighting, acoustics, instruments, control, and the Atmos seat.",
+      videoCaption: "Silent tour · ~4 min · tap a label to jump",
     },
     work: {
       sectionLabel: "Work",
@@ -196,6 +204,7 @@ export const translations = {
     brandFull: "אילן זיו שירותי מוסיקה וסאונד",
     nav: {
       offer: "ההצעה",
+      tour: "החדר",
       work: "עבודה",
       contact: "יצירת קשר",
       langSwitch: "English",
@@ -259,7 +268,7 @@ export const translations = {
             "הפעלה פשוטה ותבניות חדר שמורות",
             "גדל במודולים כשהתוכנית גדלה",
             "מיועד למטפלים, מורים וצוות",
-            "פחות ג׳אגלינג בין קופסאות ושלטים",
+            "תאורה ומצבי חדר מהטאבלט",
           ],
         },
         {
@@ -287,6 +296,13 @@ export const translations = {
           ],
         },
       ],
+    },
+    tour: {
+      sectionLabel: "החדר",
+      title: "סיור קצר בחדר",
+      subtitle:
+        "סיור ללא קול עם כתוביות קצרות — תאורה, אקוסטיקה, כלים, בקרה ועמדת Atmos.",
+      videoCaption: "סיור שקט · כ־4 דק׳ · לחצו על תווית כדי לקפוץ",
     },
     work: {
       sectionLabel: "עבודה",

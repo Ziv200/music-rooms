@@ -50,3 +50,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #9a9890;
 }
+
+/* Room tour — native fullscreen captions (WebVTT) */
+video::cue {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}

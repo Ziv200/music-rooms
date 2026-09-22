@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
   { key: "offer", href: "#offer" },
+  { key: "tour", href: "#tour" },
   { key: "work", href: "#work" },
   { key: "contact", href: "#contact" },
 ] as const;
