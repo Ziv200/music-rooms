@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-base: #f7f6f3;
+    --bg-surface: #ffffff;
+    --bg-elevated: #efeee9;
+    --ink: #111111;
+    --ink-muted: #5c5c5c;
+    --ink-faint: #8a8a8a;
+    --border-subtle: rgba(17, 17, 17, 0.08);
+    --border-strong: rgba(17, 17, 17, 0.16);
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--ink);
+    font-family: var(--font-inter), var(--font-rubik), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  [dir="rtl"] {
+    font-family: var(--font-rubik), var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-display {
+  font-family: var(--font-display), var(--font-rubik), Georgia, serif;
+}
+
+.hairline {
+  border-color: var(--border-subtle);
+}
+
+.quiet-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: #c9c7c0;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9a9890;
 }

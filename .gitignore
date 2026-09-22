@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local / bulky archives (not for Pages)
+sourceimages/
+public/project-media/_originals_with_audio/
+public/project-media/_duplicates_removed/
+public/project-media/_oversized_excluded/
