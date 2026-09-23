@@ -58,3 +58,12 @@ video::cue {
   font-size: 0.9rem;
   line-height: 1.35;
 }
+
+/* Hide horizontal scrollbar on sticky stage pills (mobile) */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

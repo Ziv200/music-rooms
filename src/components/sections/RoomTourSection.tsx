@@ -213,7 +213,11 @@ export function RoomTourSection() {
           {tour.videoCaption}
         </p>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-2">
+        {/* Horizontal scroll on narrow screens — no wrapping maze of tiny chips */}
+        <div
+          className="mt-8 -mx-4 px-4 sm:mx-0 sm:px-0 flex gap-2 overflow-x-auto scrollbar-none sm:flex-wrap sm:justify-center sm:overflow-visible"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
           {TOUR_CAPTIONS.map((c, i) => {
             const label = lang === "he" ? c.he : c.en;
             const isActive = i === activeIdx;
@@ -222,7 +226,7 @@ export function RoomTourSection() {
                 key={c.start}
                 type="button"
                 onClick={() => seekTo(c.start)}
-                className={`px-3 py-1.5 text-[11px] sm:text-[12px] tracking-wide border transition-colors ${
+                className={`shrink-0 px-3.5 py-2.5 sm:py-1.5 text-[12px] sm:text-[12px] tracking-wide border transition-colors ${
                   isActive
                     ? "border-neutral-900 bg-neutral-900 text-white"
                     : "border-neutral-900/15 text-neutral-500 hover:border-neutral-900/35 hover:text-neutral-800"

@@ -24,6 +24,8 @@ export function Lightbox({ files, initialIndex, onClose }: LightboxProps) {
     setIndex((i) => (i - 1 + files.length) % files.length);
   }, [files.length]);
 
+  const touchStartX = useRef<number | null>(null);
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -33,6 +35,19 @@ export function Lightbox({ files, initialIndex, onClose }: LightboxProps) {
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [onClose, goNext, goPrev]);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.changedTouches[0]?.clientX ?? null;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current == null) return;
+    const dx = (e.changedTouches[0]?.clientX ?? 0) - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(dx) < 48) return;
+    if (dx < 0) goNext();
+    else goPrev();
+  };
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -53,11 +68,13 @@ export function Lightbox({ files, initialIndex, onClose }: LightboxProps) {
         onClick={(e) => {
           if (e.target === containerRef.current) onClose();
         }}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
       >
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 rounded-full bg-white/10 p-2.5 text-white hover:bg-white/20 transition-colors"
+          className="absolute top-4 right-4 z-10 rounded-full bg-white/10 p-3 sm:p-2.5 text-white hover:bg-white/20 transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
