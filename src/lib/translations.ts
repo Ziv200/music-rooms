@@ -114,20 +114,20 @@ export const translations = {
         "A recent high-spec music room — from first measurements through integration. Use it as a reference for craft, finish, and process. The immersive listening seat here is an example of what the system can do; the room itself is the product.",
       phases: [
         {
-          id: "phase-0",
+          id: "phase-1",
           tag: "01",
+          title: "The space we received",
+          dateRange: "April 2026",
+          description:
+            "The existing room as handed over — the starting point before design and build.",
+        },
+        {
+          id: "phase-0",
+          tag: "02",
           title: "Planning & measurements",
           dateRange: "Early 2026",
           description:
             "Site survey, measurements, drawings, and 3D visualizations before build.",
-        },
-        {
-          id: "phase-1",
-          tag: "02",
-          title: "Acoustic design & framing",
-          dateRange: "April 2026",
-          description:
-            "Acoustic plan and structural framing for the room layout.",
         },
         {
           id: "phase-2",
@@ -311,19 +311,19 @@ export const translations = {
         "חדר מוסיקה ברמה גבוהה מהזמן האחרון — מהמדידות הראשונות ועד אינטגרציה. אפשר להשתמש בו כהפניה לאיכות ולתהליך. עמדת ההאזנה המרחבית כאן היא דוגמה ליכולת המערכת; המוצר הוא החדר עצמו.",
       phases: [
         {
-          id: "phase-0",
+          id: "phase-1",
           tag: "01",
+          title: "החלל שקיבלנו",
+          dateRange: "אפריל 2026",
+          description: "החדר הקיים כפי שנמסר — נקודת הפתיחה לפני תכנון ובנייה.",
+        },
+        {
+          id: "phase-0",
+          tag: "02",
           title: "תכנון מקדים ומדידות",
           dateRange: "תחילת 2026",
           description:
             "סיור באתר, מדידות, שרטוטים והדמיות תלת־ממד לפני הבנייה.",
-        },
-        {
-          id: "phase-1",
-          tag: "02",
-          title: "עיצוב אקוסטי ושלד",
-          dateRange: "אפריל 2026",
-          description: "תכנון אקוסטי ושלד לפריסת החדר.",
         },
         {
           id: "phase-2",

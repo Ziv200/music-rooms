@@ -8,7 +8,7 @@ import {
   SectionTitle,
   SectionSubtitle,
 } from "@/components/ui/SectionWrapper";
-import { Lightbox } from "@/components/ui/Lightbox";
+import { Lightbox, type LightboxItem } from "@/components/ui/Lightbox";
 import { Play } from "lucide-react";
 import type { MediaFile } from "@/lib/media";
 
@@ -28,13 +28,10 @@ function sortMedia(files: MediaFile[]): MediaFile[] {
 }
 
 export function TimelineSection({ phaseMedia }: TimelineSectionProps) {
-  const { t, lang } = useLang();
+  const { t, lang, dir } = useLang();
   const phases = t.work.phases;
   const [activePhase, setActivePhase] = useState(0);
-  const [lightbox, setLightbox] = useState<{
-    files: MediaFile[];
-    index: number;
-  } | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   const pillRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const scrollingToRef = useRef<number | null>(null);
@@ -42,6 +39,38 @@ export function TimelineSection({ phaseMedia }: TimelineSectionProps) {
   const mediaByPhase = useMemo(() => {
     return phases.map((phase) => sortMedia(phaseMedia[phase.id] || []));
   }, [phases, phaseMedia]);
+
+  // One continuous list so lightbox can cross stage boundaries
+  const lightboxItems: LightboxItem[] = useMemo(() => {
+    const items: LightboxItem[] = [];
+    phases.forEach((phase, phaseIdx) => {
+      for (const file of mediaByPhase[phaseIdx] || []) {
+        items.push({
+          file,
+          phaseTag: phase.tag,
+          phaseTitle: phase.title,
+        });
+      }
+    });
+    return items;
+  }, [phases, mediaByPhase]);
+
+  const phaseStartIndex = useMemo(() => {
+    const starts: number[] = [];
+    let offset = 0;
+    for (const files of mediaByPhase) {
+      starts.push(offset);
+      offset += files.length;
+    }
+    return starts;
+  }, [mediaByPhase]);
+
+  const openAt = useCallback(
+    (phaseIdx: number, localIdx: number) => {
+      setLightboxIndex((phaseStartIndex[phaseIdx] ?? 0) + localIdx);
+    },
+    [phaseStartIndex]
+  );
 
   // Track which phase is in view while scrolling
   useEffect(() => {
@@ -198,15 +227,12 @@ export function TimelineSection({ phaseMedia }: TimelineSectionProps) {
               </div>
 
               {files.length > 0 ? (
-                <div
-                  dir="ltr"
-                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2"
-                >
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                   {files.map((media, idx) => (
                     <button
                       key={media.filename}
                       type="button"
-                      onClick={() => setLightbox({ files, index: idx })}
+                      onClick={() => openAt(phaseIdx, idx)}
                       className="relative group aspect-square overflow-hidden bg-neutral-200 border border-neutral-900/5 hover:border-neutral-900/25 transition-colors"
                     >
                       {media.type === "video" ? (
@@ -251,11 +277,12 @@ export function TimelineSection({ phaseMedia }: TimelineSectionProps) {
         })}
       </div>
 
-      {lightbox && (
+      {lightboxIndex !== null && (
         <Lightbox
-          files={lightbox.files}
-          initialIndex={lightbox.index}
-          onClose={() => setLightbox(null)}
+          items={lightboxItems}
+          initialIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          dir={dir}
         />
       )}
     </SectionWrapper>
