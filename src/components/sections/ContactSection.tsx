@@ -9,14 +9,20 @@ import {
   SectionTitle,
   SectionSubtitle,
 } from "@/components/ui/SectionWrapper";
+import { Toast } from "@/components/ui/Toast";
 
-const FORMSUBMIT = "https://formsubmit.co/ajax/ziv200@gmail.com";
+const FORMSUBMIT = "https://formsubmit.co/ajax/1dd8e8986b87aa29f7acd0533941d73b";
 
 export function ContactSection() {
   const { t } = useLang();
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
+  const [toast, setToast] = useState<{
+    open: boolean;
+    kind: "success" | "error";
+    message: string;
+  }>({ open: false, kind: "success", message: "" });
 
   const f = t.contact.form;
   const inputClass =
@@ -38,10 +44,14 @@ export function ContactSection() {
       if (!res.ok) throw new Error("send failed");
       setStatus("sent");
       form.reset();
+      setToast({ open: true, kind: "success", message: f.toastSuccess });
       setTimeout(() => setStatus("idle"), 6000);
+      setTimeout(() => setToast((t) => ({ ...t, open: false })), 5000);
     } catch {
       setStatus("error");
+      setToast({ open: true, kind: "error", message: f.toastError });
       setTimeout(() => setStatus("idle"), 6000);
+      setTimeout(() => setToast((t) => ({ ...t, open: false })), 5000);
     }
   };
 
@@ -207,6 +217,13 @@ export function ContactSection() {
           </motion.div>
         </div>
       </div>
+
+      <Toast
+        open={toast.open}
+        kind={toast.kind}
+        message={toast.message}
+        onClose={() => setToast((t) => ({ ...t, open: false }))}
+      />
     </SectionWrapper>
   );
 }

@@ -183,6 +183,8 @@ export const translations = {
         submit: "Send",
         download: "Request a capability outline (PDF)",
         sent: "Sent",
+        toastSuccess: "Message sent — I’ll get back to you soon.",
+        toastError: "Couldn’t send. Please try again or email me directly.",
       },
       sidebarTitle: "What helps",
       sidebarBody:
@@ -376,6 +378,8 @@ export const translations = {
         submit: "שליחה",
         download: "בקשת מסמך יכולות (PDF)",
         sent: "נשלח",
+        toastSuccess: "ההודעה נשלחה — אחזור אליכם בהקדם.",
+        toastError: "השליחה נכשלה. נסו שוב או כתבו ישירות במייל.",
       },
       sidebarTitle: "מה עוזר",
       sidebarBody:
