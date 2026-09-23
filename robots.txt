@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ziv200.github.io/music-rooms/sitemap.xml
