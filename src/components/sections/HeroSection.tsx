@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useLang } from "@/hooks/useLang";
 import { ChevronDown } from "lucide-react";
 
-const HERO_IMAGE = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/project-media/2026-07-06_200059_2.jpg`;
+import { HERO_IMAGE } from "@/lib/media";
 
 export function HeroSection() {
   const { t } = useLang();
@@ -91,7 +91,9 @@ export function HeroSection() {
               <div className="overflow-hidden bg-neutral-200 aspect-[4/3] lg:aspect-[5/4]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={HERO_IMAGE}
+                  src={HERO_IMAGE.src}
+                  srcSet={HERO_IMAGE.srcSet}
+                  sizes="(min-width: 1024px) 58vw, 100vw"
                   alt={t.hero.photoCaption}
                   className="w-full h-full object-cover"
                 />

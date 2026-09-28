@@ -159,7 +159,8 @@ export function Lightbox({
           >
             {file.type === "video" ? (
               <video
-                src={file.src}
+                src={file.video}
+                poster={file.large}
                 controls
                 autoPlay
                 className="max-w-full max-h-[78vh] sm:max-h-[85vh] rounded-lg"
@@ -168,7 +169,7 @@ export function Lightbox({
             ) : (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={file.src}
+                src={file.large}
                 alt={file.filename}
                 className="max-w-full max-h-[78vh] sm:max-h-[85vh] rounded-lg object-contain"
               />

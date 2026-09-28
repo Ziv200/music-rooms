@@ -237,12 +237,12 @@ export function TimelineSection({ phaseMedia }: TimelineSectionProps) {
                     >
                       {media.type === "video" ? (
                         <>
-                          <video
-                            src={media.src}
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={media.thumb}
+                            alt=""
                             className="absolute inset-0 w-full h-full object-cover"
-                            muted
-                            playsInline
-                            preload="metadata"
+                            loading="lazy"
                           />
                           <div className="absolute inset-0 flex items-center justify-center bg-black/15 group-hover:bg-black/25 transition-colors">
                             <div className="w-9 h-9 rounded-full bg-white/90 flex items-center justify-center">
@@ -253,7 +253,7 @@ export function TimelineSection({ phaseMedia }: TimelineSectionProps) {
                       ) : (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
-                          src={media.src}
+                          src={media.thumb}
                           alt={media.date}
                           className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                           loading="lazy"

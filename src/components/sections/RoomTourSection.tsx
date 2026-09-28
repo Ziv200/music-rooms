@@ -15,11 +15,11 @@ import {
   buildTourVtt,
   type TourCaption,
 } from "@/lib/tourCaptions";
+import { TOUR_VIDEO } from "@/lib/media";
 
 export function RoomTourSection() {
   const { t, lang } = useLang();
   const tour = t.tour;
-  const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const shellRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [active, setActive] = useState<TourCaption>(TOUR_CAPTIONS[0]);
@@ -138,7 +138,8 @@ export function RoomTourSection() {
         >
           <video
             ref={videoRef}
-            src={`${base}/project-media/2026-07-06_200751_4.mp4`}
+            src={TOUR_VIDEO.src}
+            poster={TOUR_VIDEO.poster}
             className={
               shellFs
                 ? "w-full h-full object-contain"
@@ -147,7 +148,7 @@ export function RoomTourSection() {
             controls
             muted
             playsInline
-            preload="metadata"
+            preload="none"
             // Prefer our shell fullscreen so the HTML overlay stays visible
             controlsList="nofullscreen"
             onTimeUpdate={onTimeUpdate}
