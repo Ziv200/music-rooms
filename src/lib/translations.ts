@@ -17,7 +17,7 @@ export const translations = {
       title: "Ilan Ziv",
       titleAccent: "Music & Sound Services",
       subtitle:
-        "I design and deliver modular, computer-controlled music rooms for organizations that want a serious space — not a converted office with speakers. From acoustic planning through commissioning.",
+        "I design and deliver modular, computer-controlled music rooms for organizations that want a serious space — not a converted office. From acoustic planning through calibrated handover.",
       cta1: "See a completed room",
       cta2: "Who this is for",
       photoCaption: "Completed room — integration & calibration",
@@ -216,7 +216,7 @@ export const translations = {
       title: "אילן זיו",
       titleAccent: "שירותי מוסיקה וסאונד",
       subtitle:
-        "אני מתכנן ומספק חדרי מוסיקה מודולריים ומבוקרי־מחשב לארגונים שרוצים חלל רציני — לא משרד שהוסבו לרמקולים. מתכנון אקוסטי ועד מסירה מכוילת.",
+        "אני מתכנן ומספק חדרי מוסיקה מודולריים ומבוקרי־מחשב לארגונים שרוצים חלל רציני — לא משרד שהוסב. מתכנון אקוסטי ועד מסירה מכוילת.",
       cta1: "חדר מוגמר",
       cta2: "למי זה מתאים",
       photoCaption: "חדר מוגמר — אינטגרציה וכיול",
