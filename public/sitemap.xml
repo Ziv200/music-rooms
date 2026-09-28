@@ -1,8 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ziv200.github.io/music-rooms/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/en/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/adi-negev/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/adi-negev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/adi-negev/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/adi-negev/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/en/adi-negev/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/adi-negev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/adi-negev/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/adi-negev/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/donors/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/donors/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/donors/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/donors/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/en/donors/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/donors/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/donors/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/donors/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/rehab/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/rehab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/rehab/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/beit-halochem/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/beit-halochem/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/beit-halochem/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/workplace/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/workplace/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/workplace/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/architects/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/architects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/architects/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/services/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/services/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/accessibility/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/accessibility/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/en/accessibility/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/accessibility/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/privacy/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/privacy/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/en/privacy/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/privacy/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/terms/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/terms/"/>
+  </url>
+  <url>
+    <loc>https://ziv200.github.io/music-rooms/en/terms/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ziv200.github.io/music-rooms/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ziv200.github.io/music-rooms/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ziv200.github.io/music-rooms/terms/"/>
   </url>
 </urlset>
