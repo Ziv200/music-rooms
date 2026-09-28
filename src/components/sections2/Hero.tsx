@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { HERO_IMAGE } from "@/lib/media";
 import { SITE } from "@/lib/site-config";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { PrimaryButton, SecondaryButton, TextLink } from "@/components/ui/Buttons";
 
 type SelectorItem = { label: string; href: string; persona: string; lang?: string };
@@ -66,9 +67,7 @@ export function Hero({
             {lang === "he" ? (
               <>
                 {smallLine.replace(SITE.phone.display, "")}
-                <a href={SITE.phone.tel} className="underline underline-offset-4 font-medium whitespace-nowrap" dir="ltr">
-                  {SITE.phone.display}
-                </a>
+                <WhatsAppLink lang="he" className="underline underline-offset-4 font-medium whitespace-nowrap" />
               </>
             ) : (
               smallLine

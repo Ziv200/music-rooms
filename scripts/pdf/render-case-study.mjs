@@ -51,7 +51,7 @@ const COPY = {
     facts: (size) => `משך הפרויקט: כ־4 חודשים (אפריל–יולי 2026).${size ? ` שטח החדר: ${size}.` : ""}`,
     visit: "אפשר לתאם ביקור בסטודיו, בשעות שבהן לא מתקיים טיפול.",
     images: [
-      ["2026-04-15_162312_1", "לפני", "החלל הקיים לפני העבודות, כפי שנמסר לנו"],
+      ["2026-04-15_162456_1", "לפני", "החלל הקיים לפני העבודות, כפי שנמסר לנו"],
       ["2026-05-13_111322_1", "במהלך", "קירות צבועים וכבלים פרוסים על הרצפה לפני סגירתה"],
       ["2026-07-06_200059_2", "אחרי", "הסטודיו המוגמר: כלים, טיפול אקוסטי בקירות ובתקרה ועמדת בקרה"],
     ],
@@ -89,7 +89,7 @@ const COPY = {
     facts: (size) => `Duration: about 4 months.${size ? ` Room size: ${size}.` : ""}`,
     visit: "Visits to the studio can be arranged, at times when no therapy session is in progress.",
     images: [
-      ["2026-04-15_162312_1", "Before", "The existing space before the work, as it was handed to us"],
+      ["2026-04-15_162456_1", "Before", "The existing space before the work, as it was handed to us"],
       ["2026-05-13_111322_1", "During", "Painted walls and cables laid across the floor before it was closed"],
       ["2026-07-06_200059_2", "After", "The finished studio: instruments, acoustic wall and ceiling treatment, and a control station"],
     ],

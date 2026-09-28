@@ -1,5 +1,6 @@
 import { ProsePage, H, P, UL, A } from "@/components/pages/Prose";
 import { pageMeta } from "@/lib/seo";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { ACCESSIBILITY_REVIEW_DATE, SITE } from "@/lib/site-config";
 
 export const metadata = pageMeta({
@@ -44,7 +45,7 @@ export default function Page() {
         מהתיאורים של תמונות התיעוד מהשטח כלליים, ומסמך מקרה הבוחן (PDF) הופק כמסמך מתויג אבל עדיין לא נבדק בקורא מסך. אם נתקלתם בבעיה, אשמח לדעת ולתקן.
       </P>
       <H>הסדרי נגישות בעסק</H>
-      <P>לעסק אין משרד לקבלת קהל. פגישות מתקיימות אצל הלקוח או בשיחת וידאו. ביקור בסטודיו בעדי נגב – נחלת ערן מתואם מראש, ואשמח לברר מראש כל צורך בהתאמה.</P>
+      <P>לעסק אין משרד לקבלת קהל. פגישות מתקיימות אצל הלקוח או בשיחת וידאו. ביקור בחדר של פרויקט הדוגמא מתואם מראש, ואשמח לברר מראש כל צורך בהתאמה.</P>
       <H>רכז הנגישות ויצירת קשר</H>
       <P>נתקלתם בבעיית נגישות, או שאתם צריכים מידע בפורמט אחר? אפשר לפנות אליי:</P>
       <UL>
@@ -52,7 +53,7 @@ export default function Page() {
           <strong className="font-medium">רכז הנגישות:</strong> אילן זיו
         </li>
         <li>
-          <strong className="font-medium">טלפון ווואטסאפ:</strong> <A href={SITE.phone.tel}>{SITE.phone.display}</A>
+          <strong className="font-medium">טלפון ווואטסאפ:</strong> <WhatsAppLink lang="he" />
         </li>
         <li>
           <strong className="font-medium">דוא&quot;ל:</strong> <A href={`mailto:${SITE.email}`}>{SITE.email}</A>

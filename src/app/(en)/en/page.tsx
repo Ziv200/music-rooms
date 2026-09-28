@@ -12,7 +12,7 @@ export const metadata = pageMeta({
   altPath: "/",
   isHome: true,
   title: "Music Therapy Room Design & Build in Israel | Ilan Ziv",
-  description: "End-to-end design and build of music therapy rooms for Israeli institutions. Staff run the room from a tablet. Latest project: ADI Negev–Nahalat Eran.",
+  description: "End-to-end design and build of music therapy rooms for Israeli institutions. Staff run the room from a tablet. Projects nationwide.",
   og: "og-en-home.jpg",
 });
 

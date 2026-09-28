@@ -1,5 +1,6 @@
 import { ProsePage, H, P, A } from "@/components/pages/Prose";
 import { pageMeta } from "@/lib/seo";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { PENDING, SITE, withBase } from "@/lib/site-config";
 
 export const metadata = pageMeta({
@@ -61,7 +62,7 @@ export default function Page() {
       </P>
       <H>11. יצירת קשר</H>
       <P>
-        Music Rooms – אילן זיו · <A href={`mailto:${SITE.email}`}>{SITE.email}</A> · <A href={SITE.phone.tel}>{SITE.phone.display}</A>
+        Music Rooms – אילן זיו · <A href={`mailto:${SITE.email}`}>{SITE.email}</A> · <WhatsAppLink lang="he" />
       </P>
     </ProsePage>
   );

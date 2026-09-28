@@ -1,5 +1,6 @@
 import { ProsePage, H, P, A } from "@/components/pages/Prose";
 import { pageMeta } from "@/lib/seo";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { ACCESSIBILITY_REVIEW_DATE, SITE } from "@/lib/site-config";
 
 export const metadata = pageMeta({
@@ -34,7 +35,7 @@ export default function Page() {
       </P>
       <H>Contact the accessibility coordinator</H>
       <P>
-        Ilan Ziv · Phone &amp; WhatsApp: <A href={SITE.phone.tel}>{SITE.phone.intl}</A> · <A href={`mailto:${SITE.email}`}>{SITE.email}</A>. Please mention the page, what you were trying to do,
+        Ilan Ziv · Phone &amp; WhatsApp: <WhatsAppLink lang="en" /> · <A href={`mailto:${SITE.email}`}>{SITE.email}</A>. Please mention the page, what you were trying to do,
         and your browser and device.
       </P>
     </ProsePage>

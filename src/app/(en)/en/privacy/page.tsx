@@ -1,5 +1,6 @@
 import { ProsePage, H, P, A } from "@/components/pages/Prose";
 import { pageMeta } from "@/lib/seo";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { PENDING, SITE } from "@/lib/site-config";
 
 export const metadata = pageMeta({
@@ -70,7 +71,7 @@ export default function Page() {
       <P>I may update this policy from time to time. The date of the latest update appears at the top.</P>
       <H>12. Contact</H>
       <P>
-        Music Rooms – Ilan Ziv · {mail} · <A href={SITE.phone.tel}>{SITE.phone.intl}</A>. If there is any discrepancy between this English version and the Hebrew version, the Hebrew version prevails.
+        Music Rooms – Ilan Ziv · {mail} · <WhatsAppLink lang="en" />. If there is any discrepancy between this English version and the Hebrew version, the Hebrew version prevails.
       </P>
     </ProsePage>
   );

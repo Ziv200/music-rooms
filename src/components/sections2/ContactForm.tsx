@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { SITE } from "@/lib/site-config";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { track } from "@/lib/analytics";
 import type { heForm } from "@/content/he";
 
@@ -74,7 +75,6 @@ export function ContactForm({
   const f = copy.fields;
   const o = copy.options;
   const v = copy.validation;
-  const phone = lang === "he" ? SITE.phone.display : SITE.phone.intl;
 
   useEffect(() => {
     setEnhanced(true);
@@ -339,9 +339,7 @@ export function ContactForm({
             <div className="quiet-card p-6 space-y-3">
               <p>
                 {copy.sidebarLead}{" "}
-                <a href={SITE.phone.tel} className="underline underline-offset-4 font-medium whitespace-nowrap" dir="ltr">
-                  {phone}
-                </a>
+                <WhatsAppLink lang={lang} className="underline underline-offset-4 font-medium whitespace-nowrap" />
                 {" · "}
                 <a href={`mailto:${SITE.email}`} className="underline underline-offset-4">
                   {SITE.email}

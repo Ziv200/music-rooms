@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site-config";
+import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 
 export function Footer({
   lang,
@@ -17,7 +18,6 @@ export function Footer({
   };
   langSwitch: { label: string; href: string; hrefLang: string };
 }) {
-  const phone = lang === "he" ? SITE.phone.display : SITE.phone.intl;
   return (
     <footer className="border-t border-neutral-900/10 bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 space-y-5 text-[15px] text-neutral-700">
@@ -28,9 +28,7 @@ export function Footer({
         </p>
         <p className="leading-relaxed">
           {copy.phoneLabel}{" "}
-          <a href={SITE.phone.tel} className="underline underline-offset-4 whitespace-nowrap" dir="ltr">
-            {phone}
-          </a>
+          <WhatsAppLink lang={lang} className="underline underline-offset-4 whitespace-nowrap" />
           <span aria-hidden> · </span>
           <a href={`mailto:${SITE.email}`} className="underline underline-offset-4">
             {SITE.email}

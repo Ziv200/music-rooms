@@ -20,10 +20,8 @@ export const enCommon = {
   stickyBar: {
     cta: "Project brief",
     whatsapp: "WhatsApp",
-    call: "Call",
     ctaAria: "Request a one-page project brief",
     whatsappAria: "Send Ilan Ziv a WhatsApp message",
-    callAria: "Call Ilan Ziv, +972-54-450-0529",
   },
   footer: {
     brand: "Music Rooms – Ilan Ziv",
@@ -46,15 +44,15 @@ export const enHero = {
   body: "I design and build music therapy rooms for rehabilitation centers, hospitals and care institutions in Israel, end to end: acoustic survey and 3D planning, infrastructure and cabling, acoustic treatment and speakers, and control-software integration and calibration. Staff run the room from a tablet with saved scenes, with no sound engineer needed for each session.",
   proof: "Latest project: The Valerie and Michael Miller Music Therapy Studio at ADI Negev–Nahalat Eran, opened in August 2026.",
   primary: "Request a one-page project brief",
-  secondary: "See the ADI Negev case study",
-  smallLine: "Visiting Israel? The studio at ADI Negev can be visited by arrangement.",
+  secondary: "Tour a sample project",
+  smallLine: "Visiting Israel? The studio can be visited by arrangement.",
   imageAlt: "The music therapy studio at ADI Negev–Nahalat Eran after completion: instruments, acoustic wall treatment and a control station",
 };
 
 export const enCaseTeaser = {
   eyebrow: "Case study",
   title: "The Valerie and Michael Miller Music Therapy Studio",
-  body: "At ADI Negev–Nahalat Eran, a rehabilitation village with a rehabilitation hospital, a special education school and residences for people with disabilities, I built The Valerie and Michael Miller Music Therapy Studio: planning, infrastructure, acoustic treatment, audio systems, instruments, smart lighting and tablet control. The music therapists run the room on their own.",
+  body: "At a rehabilitation village with a rehabilitation hospital, a special education school and residences for people with disabilities, I built The Valerie and Michael Miller Music Therapy Studio: planning, infrastructure, acoustic treatment, audio systems, instruments, smart lighting and tablet control. The music therapists run the room on their own.",
   button: "Read the case study",
   pdf: "Download the case study (PDF)",
 };
@@ -76,12 +74,12 @@ export const enProcess = {
     { title: "Integration and calibration:", body: "control software, scenes for each group, and testing." },
     { title: "Handover and training:", body: "a calibrated room that staff run from a tablet, staff training, and ongoing support and scene updates after handover." },
   ],
-  timeline: "At ADI Negev, the work from the space as received to a calibrated room took about four months (April–July 2026). Every project's timeline depends on its scope.",
+  timeline: "In the sample project, the work from the space as received to a calibrated room took about four months (April–July 2026). Every project's timeline depends on its scope.",
 };
 
 export const enVisit = {
   title: "Visit",
-  body: "The best way to understand the room is to sit in it. Visits to the music therapy studio at ADI Negev–Nahalat Eran can be arranged at times when no therapy session is in progress. I coordinate each visit in advance and join to show how the room is built and how staff run it.",
+  body: "The best way to understand the room is to sit in it. Visits to the music therapy studio I built in the sample project can be arranged at times when no therapy session is in progress. I coordinate each visit in advance and join to show how the room is built and how staff run it.",
   button: "Arrange a visit",
 };
 
@@ -100,9 +98,9 @@ export const enFaq: FaqItem[] = [
   { id: 1, q: "Who runs the room day to day?", a: "The staff. The room is controlled from a tablet and a wall remote, with saved scenes for each type of session. No sound engineer is needed for each session." },
   { id: 2, q: "What does it cost?", a: "Every room is priced after a needs assessment and a site survey, based on the space, infrastructure and modules. There is a full project and a smaller Core Room in an existing space. The initial needs assessment is free of charge." },
   { id: 4, q: "Can we start small and expand?", a: "Yes. Rooms are modular: start with a Core Room and add instruments, smart lighting, recording or a Dolby Atmos listening station later." },
-  { id: 5, q: "How are these rooms funded?", a: "Many institutions fund a music room through a dedicated gift, as at ADI Negev–Nahalat Eran. I can prepare a one-page project brief for the development office to share with donors." },
+  { id: 5, q: "How are these rooms funded?", a: "Many institutions fund a music room through a dedicated gift, as in the sample project. I can prepare a one-page project brief for the development office to share with donors." },
   { id: 7, q: "What happens after handover?", a: "Staff receive structured training at handover, and I remain available for support, questions and scene updates. Service terms are set in each project agreement." },
-  { id: 9, q: "Can we see a room like this?", a: "Yes. Visits to the studio at ADI Negev can be arranged when no therapy session is in progress, coordinated in advance through me." },
+  { id: 9, q: "Can we see a room like this?", a: "Yes. Visits to the studio I built in the sample project can be arranged when no therapy session is in progress, coordinated in advance through me." },
 ];
 
 export const enForm = {
@@ -141,7 +139,7 @@ export const enForm = {
     funding: ["Existing budget", "Approved donation", "Looking for a donor", "Not known yet"],
     timeline: ["Within six months", "Six months to a year", "More than a year", "Not known"],
     region: ["South", "Center", "Jerusalem area", "Sharon", "Haifa area", "North", "Other"],
-    requests: ["I'd like to arrange a visit to the room at ADI Negev", "I'd like a donor project brief", "I'd like to receive the case study (PDF)"],
+    requests: ["I'd like to arrange a visit to the room", "I'd like a donor project brief", "I'd like to receive the case study (PDF)"],
   },
   consentBefore: "I have read the ",
   consentLink: "privacy policy",
@@ -149,7 +147,7 @@ export const enForm = {
   note: "Your details are sent to my email via FormSubmit, a third-party service. I won't add you to any mailing list.",
   submit: "Request a needs assessment",
   sending: "Sending…",
-  thanks: "Thank you! I've received your details and will get back to you shortly. Meanwhile, you're welcome to read the ADI Negev case study.",
+  thanks: "Thank you! I've received your details and will get back to you shortly. Meanwhile, you're welcome to take a look at the sample project.",
   thanksLink: "→",
   error: "Something went wrong. Please try again, or write to me directly at ziv200@gmail.com or on WhatsApp: +972-54-450-0529.",
   validation: {
@@ -190,7 +188,7 @@ export const enCaseStudy = {
     { id: "phase-4", tag: "05", title: "Integration and calibration", date: "July 2026", body: "" },
   ],
   visitTitle: "Visit",
-  visit: "The best way to understand the room is to sit in it. Visits to the studio at ADI Negev can be arranged through me, at times when no therapy session is in progress.",
+  visit: "The best way to understand the room is to sit in it. Visits to the studio can be arranged through me, at times when no therapy session is in progress.",
   visitButton: "Arrange a visit",
   closing: "Planning a room like this?",
   closingButton: "Request a one-page project brief",
@@ -200,7 +198,7 @@ export const enCaseStudy = {
 export const enDonors = {
   h1: "Fund a music therapy room that carries a donor's name",
   subtitle: "A tangible, well-documented project, with a finished reference already in use.",
-  intro: "Most of the new music rooms in Israeli rehabilitation centers and hospitals were funded by donors. At ADI Negev–Nahalat Eran, the hospital contracted the project and a dedicated gift funded it; the studio now bears the name of Valerie and Michael Miller. I work with the clinical team and the development office, so you have something concrete to show a donor before work begins.",
+  intro: "Most of the new music rooms in Israeli rehabilitation centers and hospitals were funded by donors. In the sample project, the hospital contracted the work and a dedicated gift funded it; the studio now bears the name of Valerie and Michael Miller. I work with the clinical team and the development office, so you have something concrete to show a donor before work begins.",
   stepsTitle: "How it works:",
   steps: [
     { title: "The clinical team defines the need:", body: "who will use the room, for which groups, and in which space. The needs assessment is free of charge, and it usually ends with an initial room program." },
@@ -210,15 +208,15 @@ export const enDonors = {
   dedicationTitle: "About dedications:",
   dedication: "Naming and dedication options are set by the institution and its policies. My part is to deliver a room that is easy to present, photograph and dedicate.",
   visitTitle: "Visiting Israel?",
-  visit: "The studio at ADI Negev can be visited by arrangement, when no therapy session is in progress.",
+  visit: "The studio I built can be visited by arrangement, when no therapy session is in progress.",
   primary: "Request a one-page project brief",
-  secondary: "Download the ADI Negev case study (PDF)",
+  secondary: "Download the case study (PDF)",
 };
 
 export const enThanks = {
   h1: "Thank you!",
-  body: "I've received your details and will get back to you shortly. Meanwhile, you're welcome to read the ADI Negev case study.",
-  link: "See the ADI Negev case study",
+  body: "I've received your details and will get back to you shortly. Meanwhile, you're welcome to take a look at the sample project.",
+  link: "Tour a sample project",
 };
 
 /** Existing site copy for the room tour (English). */

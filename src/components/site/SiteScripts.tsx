@@ -21,7 +21,7 @@ let initialViewSeen = false;
 /**
  * - GoatCounter: loaded only on the production host. The script counts the first page view
  *   itself; later client-side route changes are counted here (first run skipped, so no double count).
- * - Delegated click tracking: [data-track], tel:, wa.me, mailto:, PDF links.
+ * - Delegated click tracking: [data-track], wa.me (all phone links open WhatsApp), mailto:, PDF links.
  * - [data-prefill] CTAs pre-tick the matching checkbox in the contact form.
  * - OpenNagish accessibility widget (self-hosted, pinned 1.1.5), loaded after the page is idle.
  */
@@ -56,8 +56,7 @@ export function SiteScripts({ lang }: { lang: "he" | "en" }) {
       const explicit = el.getAttribute("data-track");
       const href = el.getAttribute("href") || "";
       if (explicit) track(explicit);
-      if (href.startsWith("tel:")) track("click-phone");
-      else if (href.includes("wa.me/")) track("click-whatsapp");
+      if (href.includes("wa.me/")) track("click-whatsapp");
       else if (href.startsWith("mailto:")) track("click-email");
 
       const prefill = el.getAttribute("data-prefill");

@@ -87,7 +87,7 @@ export function PersonaTemplate({ p }: { p: PersonaPage }) {
             {blk === p.proof ? (
               <p className="mt-5">
                 <TextLink href="/adi-negev/" track="cta-case-study">
-                  לסיפור הפרויקט בעדי נגב ←
+                  למקרה הבוחן המלא ←
                 </TextLink>
               </p>
             ) : null}

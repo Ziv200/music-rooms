@@ -12,8 +12,8 @@ export function professionalService(lang: "he" | "en") {
     image: `${SITE.url}/og/og-he-home.jpg`,
     logo: `${SITE.url}/icon-512.png`,
     description: he
-      ? "תכנון והקמה של חדרי מוסיקה טיפוליים למוסדות שיקום, לבתי חולים ולארגונים: סקר אקוסטי, תשתיות, אקוסטיקה ובקרה מטאבלט. הפרויקט האחרון: עדי נגב – נחלת ערן."
-      : "End-to-end design and build of music therapy rooms for Israeli institutions. Staff run the room from a tablet. Latest project: ADI Negev–Nahalat Eran.",
+      ? "תכנון והקמה של חדרי מוסיקה טיפוליים למוסדות שיקום, לבתי חולים ולארגונים: סקר אקוסטי, תשתיות, אקוסטיקה ובקרה מטאבלט. פרויקטים בכל הארץ."
+      : "End-to-end design and build of music therapy rooms for Israeli institutions. Staff run the room from a tablet. Projects nationwide.",
     email: SITE.email,
     telephone: SITE.phone.intl,
     areaServed: { "@type": "Country", name: "Israel" },

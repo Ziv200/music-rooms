@@ -18,8 +18,9 @@ export const SITE = {
   phone: {
     display: "054-4500529",
     intl: "+972-54-450-0529",
-    tel: "tel:+972544500529",
+    /** Every phone link on the site opens WhatsApp (Ilan, Sep 2026). The visible number stays. */
     whatsapp: "https://wa.me/972544500529",
+    whatsappAria: { he: "שליחת הודעת וואטסאפ ל־054-4500529", en: "Send a WhatsApp message to +972-54-450-0529" },
   },
   formsubmit: {
     /** AJAX endpoint (JS enabled). Hashed address, keep as is. */
@@ -61,7 +62,7 @@ export const PENDING = {
    *  While null, the line is omitted. */
   legalLastUpdated: null as string | null,
 
-  /** TODO(Ilan, optional): ADI Negev room size, e.g. { he: "כ־60 מ\"ר", en: "about 60 m²" }.
+  /** TODO(Ilan, optional): room size of the case-study studio, e.g. { he: "כ־60 מ\"ר", en: "about 60 m²" }.
    *  While null, the fact-box row is removed (SCP B.3 allows this). Also used in the PDFs. */
   adiRoomSize: null as Bilingual,
 

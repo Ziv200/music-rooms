@@ -28,9 +28,11 @@ export function CaseTeaser({
   buttonHref: string;
   pdf: string;
 }) {
-  const before = "2026-04-15_162312_1";
+  // "Before": photo 8 of 8 in stage 01 ("החלל שקיבלנו"), portrait, fits the 3:4 slot (the panorama did not).
+  const before = "2026-04-15_162456_1";
   const after = "2026-07-06_200059_2";
   const labels = lang === "he" ? ["לפני", "אחרי"] : ["Before", "After"];
+  const beforeAlt = lang === "he" ? "החלל הריק לפני תחילת העבודות: מבט לאורך החלונות הרחבים" : "The empty space before work began: a view along its wide windows";
   return (
     <Section id="case-study" labelledBy="case-study-title" tone="surface">
       <div className="grid lg:grid-cols-12 gap-10 items-center">
@@ -61,7 +63,7 @@ export function CaseTeaser({
             <figure key={stem}>
               <div className="aspect-[3/4] overflow-hidden bg-neutral-200">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={mediaUrl(`thumb/${stem}.webp`)} alt={galleryAlt(stem, lang)} loading="lazy" decoding="async" width={560} height={747} className="w-full h-full object-cover" />
+                <img src={mediaUrl(`thumb/${stem}.webp`)} alt={i === 0 ? beforeAlt : galleryAlt(stem, lang)} loading="lazy" decoding="async" width={560} height={747} className="w-full h-full object-cover" />
               </div>
               <figcaption className="mt-2 text-[15px] text-neutral-700">{labels[i]}</figcaption>
             </figure>
