@@ -109,12 +109,12 @@ export const TOUR_CAPTIONS: TourCaption[] = [
     he: "עמדת Atmos",
     en: "Atmos listening seat",
     hePoints: [
-      "גולת הכותרת של העבודה — שמע מרחבי (Atmos)",
+      "מודול אופציונלי — שמע מרחבי (Atmos)",
       "12 רמקולים: 4 בתקרה, 7 ברצפה, ועוד סאב",
       "כיסא מרכזי — חוויית האזנה חזקה (“וואו”)",
     ],
     enPoints: [
-      "The crown of the build — immersive Atmos listening",
+      "An optional module — immersive Atmos listening",
       "12 speakers: 4 ceiling, 7 floor-level, plus a sub",
       "Central armchair — described as a striking “wow” experience",
     ],
@@ -122,8 +122,8 @@ export const TOUR_CAPTIONS: TourCaption[] = [
   {
     start: 215,
     end: 250,
-    he: "שליטה מ־iPad",
-    en: "iPad room control",
+    he: "שליטה מטאבלט",
+    en: "Tablet room control",
     hePoints: [
       "ממשק ייעודי על iPad על שולחן הבקרה",
       "מאקרואים לחדר (כולל כפתור Atmos שמשנה גם תאורה)",

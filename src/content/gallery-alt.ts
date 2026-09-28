@@ -1,0 +1,63 @@
+/**
+ * Alt text for the project gallery (SCP B.3 rule: a short sentence describing what is
+ * visible, no names of people). The component prefixes "שלב NN, <title>: " / "Stage NN, <title>: ".
+ * Written from the actual photos (reviewed Sept 2026).
+ */
+export const GALLERY_ALT: Record<string, { he: string; en: string }> = {
+  "2026-04-10_100000_1": { he: "הדמיה בתלת־ממד של החדר המתוכנן במבט מלמעלה, עם פריסת הכלים והטיפול האקוסטי", en: "Top-down 3D rendering of the planned room, with the instrument layout and acoustic treatment" },
+  "2026-04-10_100001_1": { he: "תוכנית של החלל עם מידות", en: "Floor plan of the space with dimensions" },
+  "2026-04-10_100002_1": { he: "מודל תלת־ממדי של קירות החדר והפאנלים האקוסטיים, במבט מלמעלה", en: "3D model of the room walls and acoustic panels, seen from above" },
+  "2026-04-10_100003_1": { he: "סרטון הדמיה בתלת־ממד של החדר המתוכנן", en: "3D rendering video of the planned room" },
+  "2026-04-15_162304_1": { he: "פינת הכניסה לחלל הקיים: דלת זכוכית, וילון וחלונות", en: "The entrance corner of the existing space: a glass door, a curtain and windows" },
+  "2026-04-15_162312_1": { he: "מבט פנורמי על החלל הריק לפני תחילת העבודות", en: "Panoramic view of the empty space before work began" },
+  "2026-04-15_162403_1": { he: "החלל הקיים, עם מדפי ציוד בקיר האחורי", en: "The existing space, with equipment shelves on the back wall" },
+  "2026-04-15_162409_1": { he: "החלל הקיים, עם כיסאות מוערמים לאורך החלונות", en: "The existing space, with stacked chairs along the windows" },
+  "2026-04-15_162427_1": { he: "צד אחר של החלל הקיים, עם שולחן עגול וציוד מאוחסן", en: "Another side of the existing space, with a round table and stored equipment" },
+  "2026-04-15_162437_1": { he: "מבט לעבר הכניסה, עם כיסאות מוערמים ומסך על הקיר", en: "View toward the entrance, with stacked chairs and a screen on the wall" },
+  "2026-04-15_162449_1": { he: "מבט אלכסוני על החלל הקיים, התקרה והעמודים", en: "Diagonal view of the existing space, its ceiling and columns" },
+  "2026-04-15_162456_1": { he: "מבט לאורך החלונות הרחבים של החלל הקיים", en: "View along the wide windows of the existing space" },
+  "2026-05-06_120734_1": { he: "סרטון קצר מתחילת עבודות התשתית בחדר", en: "Short video from the start of the infrastructure work" },
+  "2026-05-06_120758_1": { he: "תחילת העבודות: סולמות וכלי עבודה בחלל", en: "Work begins: ladders and tools in the space" },
+  "2026-05-06_122453_1": { he: "כלי עבודה וכבלים על הרצפה בתחילת עבודות התשתית", en: "Tools and cables on the floor as the infrastructure work starts" },
+  "2026-05-06_130949_1": { he: "פירוק הריצוף הישן לקראת רצפה חדשה", en: "Removing the old floor tiles before the new floor" },
+  "2026-05-13_111235_1": { he: "עבודות רצפה: החלל אחרי פירוק הריצוף", en: "Floor work: the space after the tiles were removed" },
+  "2026-05-13_111244_1": { he: "קירות צבועים מחדש ותקרה חדשה, לפני הנחת הרצפה", en: "Freshly painted walls and a new ceiling, before the floor was laid" },
+  "2026-05-13_111249_1": { he: "עבודות תקרה ותאורה על סולמות", en: "Ceiling and lighting work on ladders" },
+  "2026-05-13_111322_1": { he: "קירות צבועים וכבלים פרוסים על הרצפה לפני סגירתה", en: "Painted walls and cables laid across the floor before it was closed" },
+  "2026-05-13_123009_1": { he: "מבט לעבר הכניסה במהלך עבודות התשתית", en: "View toward the entrance during the infrastructure work" },
+  "2026-05-13_194705_1": { he: "הרצפה החדשה והתאורה הנסתרת בתקרה, בסיום עבודות התשתית", en: "The new floor and concealed ceiling lighting at the end of the infrastructure work" },
+  "2026-05-13_194708_1": { he: "החדר עם הרצפה החדשה, לפני התקנת הטיפול האקוסטי", en: "The room with its new floor, before the acoustic treatment was installed" },
+  "2026-05-13_194717_1": { he: "סרטון קצר מסוף שלב התשתיות", en: "Short video from the end of the infrastructure stage" },
+  "2026-06-02_120112_1": { he: "בניית פאנל אקוסטי בנגרייה: מסגרת עם בד", en: "Building an acoustic panel in the workshop: a frame with fabric" },
+  "2026-06-02_120112_3": { he: "מסגרות של פאנלים אקוסטיים ממולאות בחומר בידוד", en: "Acoustic panel frames filled with insulation" },
+  "2026-06-02_120112_4": { he: "פאנל אקוסטי מצופה בד על שולחן העבודה", en: "A fabric-covered acoustic panel on the workbench" },
+  "2026-06-02_120112_5": { he: "ציפוי פאנל אקוסטי בבד בנגרייה", en: "Covering an acoustic panel with fabric in the workshop" },
+  "2026-06-02_120112_7": { he: "הידוק הבד למסגרת הפאנל", en: "Stapling the fabric to the panel frame" },
+  "2026-06-02_120112_9": { he: "סיום ציפוי של פאנל אקוסטי", en: "Finishing the covering of an acoustic panel" },
+  "2026-06-03_174626_1": { he: "רמקולים תלויים על מוט בתקרה", en: "Speakers mounted on a ceiling bar" },
+  "2026-06-04_045316_1": { he: "רמקולים על מעמדים בזמן בדיקת מיקום", en: "Speakers on stands during placement testing" },
+  "2026-06-04_144811_1": { he: "רמקולים על מעמדים וכבלים על הרצפה", en: "Speakers on stands with cables on the floor" },
+  "2026-06-08_064406_1": { he: "רמקולים מוצבים סביב החדר לפי התכנון", en: "Speakers placed around the room according to the plan" },
+  "2026-06-08_064416_1": { he: "מבט לאורך החדר, עם הרמקולים על המעמדים ובתקרה", en: "View along the room, with speakers on stands and on the ceiling" },
+  "2026-06-08_064504_1": { he: "הרכבת מסגרות לפאנלים אקוסטיים על רצפת החדר", en: "Assembling acoustic panel frames on the room floor" },
+  "2026-06-08_064510_1": { he: "התקנת פאנלים אקוסטיים על הקירות", en: "Installing acoustic panels on the walls" },
+  "2026-06-08_064520_1": { he: "פאנלים אקוסטיים על הקירות ורמקול בפינה", en: "Acoustic panels on the walls and a speaker in the corner" },
+  "2026-06-28_194420_1": { he: "סרטון קצר של הפאנלים האקוסטיים אחרי ההתקנה", en: "Short video of the acoustic panels after installation" },
+  "2026-07-06_195816_1": { he: "החדר המוגמר: וילונות אקוסטיים, רמקולים על מעמדים וכורסה במרכז", en: "The finished room: acoustic curtains, speakers on stands and an armchair in the middle" },
+  "2026-07-06_195850_1": { he: "עמדת ההאזנה: כורסה במרכז, מוקפת רמקולים", en: "The listening station: an armchair in the middle, surrounded by speakers" },
+  "2026-07-06_195952_1": { he: "פסנתר עומד עם ספסל, ופאנל אקוסטי על הקיר מעליו", en: "An upright piano with a bench, and an acoustic panel on the wall above it" },
+  "2026-07-06_195956_1": { he: "גיטרה בס ומגבר בס", en: "A bass guitar and a bass amplifier" },
+  "2026-07-06_200019_1": { he: "ערכת תופים אלקטרונית", en: "An electronic drum kit" },
+  "2026-07-06_200043_1": { he: "מקלדת חשמלית עם כיסא", en: "An electric keyboard with a chair" },
+  "2026-07-06_200059_2": { he: "מבט כללי על החדר המוגמר: כלים, וילונות אקוסטיים, פאנלים בתקרה ורמקולים", en: "Overview of the finished room: instruments, acoustic curtains, ceiling panels and speakers" },
+  "2026-07-06_200111_1": { he: "החדר המוגמר, עם פאנלים אקוסטיים תלויים בתקרה ומעמדי מיקרופון", en: "The finished room, with acoustic panels suspended from the ceiling and microphone stands" },
+  "2026-07-06_200136_1": { he: "ארון השמע עם הציוד", en: "The audio rack with its equipment" },
+  "2026-07-06_200206_1": { he: "שלט הקיר בכניסה, שמדליק את החדר ומחליף בין מצבי תאורה", en: "The wall remote at the entrance, which turns the room on and switches lighting modes" },
+  "2026-07-06_200751_2": { he: "סרטון קצר של עמדת ההאזנה והכורסה במרכז", en: "Short video of the listening station and the armchair in the middle" },
+  "2026-07-06_200751_4": { he: "סרטון הסיור בחדר המוגמר", en: "Walkthrough video of the finished room" },
+  "2026-07-07_133139_1": { he: "אנשים בחדר המוגמר", en: "People in the finished room" },
+};
+
+export function galleryAlt(stem: string, lang: "he" | "en"): string {
+  return GALLERY_ALT[stem]?.[lang] ?? "";
+}

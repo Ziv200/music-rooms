@@ -4,31 +4,55 @@
   :root {
     --bg-base: #f7f6f3;
     --bg-surface: #ffffff;
-    --bg-elevated: #efeee9;
     --ink: #111111;
-    --ink-muted: #5c5c5c;
-    --ink-faint: #8a8a8a;
-    --border-subtle: rgba(17, 17, 17, 0.08);
-    --border-strong: rgba(17, 17, 17, 0.16);
+    --border-subtle: rgba(17, 17, 17, 0.1);
+  }
+
+  html[lang="he"] body {
+    font-family: var(--font-rubik), -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  }
+  html[lang="en"] body {
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   }
 
   body {
     background-color: var(--bg-base);
     color: var(--ink);
-    font-family: var(--font-inter), var(--font-rubik), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 
-  [dir="rtl"] {
-    font-family: var(--font-rubik), var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* No letter-spacing on Hebrew text */
+  [lang="he"] {
+    letter-spacing: normal;
+  }
+
+  :focus-visible {
+    outline: 2px solid #111111;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 .font-display {
-  font-family: var(--font-display), var(--font-rubik), Georgia, serif;
+  font-family: var(--font-display), var(--font-rubik), var(--font-inter), Georgia, serif;
 }
-
-.hairline {
-  border-color: var(--border-subtle);
+html[lang="he"] .font-display {
+  /* Hebrew headings use Rubik; Latin words inside keep the display face */
+  font-family: var(--font-display), var(--font-rubik), Arial, sans-serif;
 }
 
 .quiet-card {
@@ -36,46 +60,18 @@
   border: 1px solid var(--border-subtle);
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-base);
-}
-::-webkit-scrollbar-thumb {
-  background: #c9c7c0;
-  border-radius: 9999px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #9a9890;
-}
-
 /* Room tour — native fullscreen captions (WebVTT) */
 video::cue {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   font-size: 0.9rem;
   line-height: 1.35;
 }
 
-/* Hide horizontal scrollbar on sticky stage pills (mobile) */
 .scrollbar-none {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 .scrollbar-none::-webkit-scrollbar {
   display: none;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
 }

@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local scratch tooling (gitignored) and vendored third-party minified code
+    "_analysis/**",
+    "public/vendor/**",
   ]),
 ]);
 

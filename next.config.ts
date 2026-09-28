@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   basePath: isPages ? `/${repo}` : "",
   assetPrefix: isPages ? `/${repo}/` : undefined,
+  experimental: {
+    // Needed because the app has two root layouts ((he) and (en)) and no single app/layout.tsx
+    globalNotFound: true,
+  },
   env: {
     NEXT_PUBLIC_BASE_PATH: isPages ? `/${repo}` : "",
   },
