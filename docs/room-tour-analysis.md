@@ -2,7 +2,7 @@
 
 Source: narrated ~4 min video `2026-07-06_200751_4` (audio restored from `_originals_with_audio`).
 Visual + narration review (watchVideo) cross-checked against Whisper raw transcript.
-Public site copy must not name the host facility (Adi Negev).
+ADI Negev–Nahalat Eran, the studio name (The Valerie and Michael Miller Music Therapy Studio) and the donors' names as publicly announced may be used in public copy (approved by Ilan, Sept 2026). Do not publish project cost. Do not claim the studio serves IDF veterans or war casualties.
 
 ## Structured inventory (order of narration)
 
@@ -29,13 +29,13 @@ Public site copy must not name the host facility (Adi Negev).
 
 ## Atmos listening position
 
-- Described as the crown jewel of the work, optional upgrade in sales positioning.
+- Positioned as an optional module in sales copy (never the hero message). For public wording use only the softened Atmos text in the site content package, SCP B.12 (default option A).
 - **12 speakers:** 4 ceiling + 7 floor-level ring + 1 subwoofer around a central armchair.
 - Sitting experience described as striking (“wow”).
 
-## Hebrew sales-oriented summary (facility name omitted)
+## Hebrew sales-oriented summary
 
-חדר המוזיקה והטיפול מציג סטנדרט גבוה של סאונד, עיצוב וטכנולוגיה. החלל מטופל אקוסטית ברמה גבוהה ומאובזר בכלים — מערכת תופים אלקטרונית חרישית, פסנתר ימאהה, מקלדת קוואי, גיטרות וכלי הקשה של רולנד. מערכות התאורה והשמע נשלטות דרך שלט קיר ו־iPad ייעודי. גולת הכותרת האופציונלית היא עמדת האזנה בטכנולוגיית שמע מרחבי (Dolby Atmos) עם 12 רמקולים לחוויית האזנה עוטפת ומדויקת.
+חדר המוזיקה והטיפול מציג סטנדרט גבוה של סאונד, עיצוב וטכנולוגיה. החלל מטופל אקוסטית ברמה גבוהה ומאובזר בכלים — מערכת תופים אלקטרונית חרישית, פסנתר ימאהה, מקלדת קוואי, גיטרות וכלי הקשה של רולנד. מערכות התאורה והשמע נשלטות דרך שלט קיר ו־iPad ייעודי. מודול אופציונלי הוא עמדת האזנה בטכנולוגיית שמע מרחבי (Dolby Atmos) עם 12 רמקולים לחוויית האזנה עוטפת ומדויקת.
 
 ## Related media
 

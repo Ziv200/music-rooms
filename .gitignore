@@ -47,3 +47,7 @@ public/project-media/_duplicates_removed/
 public/project-media/_oversized_excluded/
 
 _analysis/
+
+# design drafts (not for the site)
+public/icon-master.png
+public/logo-options/
