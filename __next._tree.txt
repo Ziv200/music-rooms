@@ -1,0 +1,6 @@
+:HL["/music-rooms/_next/static/chunks/0-4maztn65jft.css","style"]
+:HL["/music-rooms/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/music-rooms/_next/static/media/87c7f5b5afcd23bd-s.p.0kf5m0zv7sxld.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/music-rooms/_next/static/media/c9f6ebf08ddd616b-s.p.0sv86lbjkn8rn.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/music-rooms/media/hero-1400.webp","image",{"imageSrcSet":"/music-rooms/media/hero-800.webp 800w, /music-rooms/media/hero-1400.webp 1400w","imageSizes":"(min-width: 1024px) 560px, 100vw","fetchPriority":"high"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"(he)","param":null,"prefetchHints":4208,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"PC6-KGlahR7f9askBvueA"}

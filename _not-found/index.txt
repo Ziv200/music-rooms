@@ -1,0 +1,15 @@
+1:"$Sreact.fragment"
+2:I[39756,["/music-rooms/_next/static/chunks/3fntmmi971322.js"],"default"]
+3:I[37457,["/music-rooms/_next/static/chunks/3fntmmi971322.js"],"default"]
+4:I[97367,["/music-rooms/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+8:I[97367,["/music-rooms/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
+a:I[97367,["/music-rooms/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
+c:I[68027,[],"default",1]
+:HL["/music-rooms/_next/static/chunks/0-4maztn65jft.css","style"]
+7:X
+0:{"P":null,"c":["","_not-found",""],"q":"","i":false,"f":[[["",{"children":["/_not-found",{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/music-rooms/_next/static/chunks/0-4maztn65jft.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/music-rooms/_next/static/chunks/3fntmmi971322.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"he","dir":"rtl","className":"rubik_11de2749-module__Davi8q__variable inter_ebfe5b0c-module__vyy85a__variable","children":["$","body",null,{"className":"min-h-screen flex items-center justify-center p-6","children":["$","main",null,{"className":"max-w-lg text-center space-y-4","children":[["$","h1",null,{"className":"text-3xl font-medium","children":"הדף לא נמצא"}],["$","p",null,{"children":["$","a",null,{"href":"/music-rooms/","className":"underline underline-offset-4","children":"לדף הבית"}]}],["$","p",null,{"lang":"en","dir":"ltr","children":["Page not found."," ",["$","a",null,{"href":"/music-rooms/en/","className":"underline underline-offset-4","children":"English home page"}]]}]]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],{},null,false,null]},null,false,"$7"]},null,false,null],["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L8",null,{"children":"$L9"}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$Lb"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$c",[]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"PC6-KGlahR7f9askBvueA"}
+7:C
+9:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+b:[["$","title","0",{"children":"הדף לא נמצא | Page not found – Music Rooms"}],["$","meta","1",{"name":"robots","content":"noindex"}]]

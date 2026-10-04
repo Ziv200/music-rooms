@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ilan Ziv">
+  <rect width="512" height="512" fill="#f7f6f3"/>
+  <circle cx="256" cy="256" r="198" fill="none" stroke="#1c1b19" stroke-width="6"/>
+  <!-- Elegant serif I as paths -->
+  <rect x="168" y="130" width="176" height="18" rx="1" fill="#1c1b19"/>
+  <rect x="242" y="130" width="28" height="252" fill="#1c1b19"/>
+  <rect x="168" y="364" width="176" height="18" rx="1" fill="#1c1b19"/>
+</svg>
