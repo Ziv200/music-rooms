@@ -7,7 +7,7 @@ Originals are NOT kept in the repo. They live in
 Outputs (committed):
   public/media/thumb/<stem>.webp   ~560px wide gallery thumbnails
   public/media/large/<stem>.webp   ~1600px long side, for the lightbox
-  public/media/video/<stem>.mp4    H.264 (yuv420p, faststart, no audio)
+  public/media/video/<stem>.mp4    H.264 (yuv420p, faststart); no audio, except the room tour (AAC)
   public/media/poster/<stem>.webp  poster frame for each video
   public/media/hero-{800,1400}.webp
   src/lib/media-manifest.json      list consumed by src/lib/media.ts
@@ -63,7 +63,15 @@ for f in sorted(SRC.iterdir()):
         # 720p cap on the long side for clips; tour is portrait 1080x1920 -> 720x1280
         scale = "scale='if(gt(iw,ih),min(1280,iw),-2)':'if(gt(iw,ih),-2,min(1280,ih))'"
         if not vid.exists():
-            subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(f), "-an",
+            # Gallery clips are silent. The room tour keeps its narration (Ilan, Oct 2026):
+            # AAC 128 kbps, loudness-normalised to about -16 LUFS (two-pass loudnorm values measured
+            # on this source), plus a limiter for headroom.
+            audio = ["-an"] if not is_tour else [
+                "-map", "0:v:0", "-map", "0:a:0", "-map_metadata", "-1",
+                "-af", "loudnorm=I=-16:TP=-2:LRA=11:measured_I=-22.70:measured_TP=-1.11:measured_LRA=8.10:"
+                       "measured_thresh=-34.95:offset=-0.06,aresample=48000,alimiter=limit=0.708:attack=5:release=50:level=0",
+                "-c:a", "aac", "-b:a", "128k", "-ac", "2"]
+            subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(f), *audio,
                             "-vf", scale + ",format=yuv420p",
                             "-c:v", "libx264", "-preset", "slow", "-crf", "28" if is_tour else "26",
                             "-profile:v", "high", "-movflags", "+faststart", str(vid)], check=True)

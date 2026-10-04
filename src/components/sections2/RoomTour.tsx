@@ -8,10 +8,24 @@ import { track } from "@/lib/analytics";
 
 type TourCopy = { title: string; subtitle: string; caption: string; chaptersLabel: string; fullscreen: string; exitFullscreen: string };
 
-/** Silent walkthrough video with chapter overlay + WebVTT captions. Poster + preload="none". */
+/**
+ * Narrated walkthrough video (with sound) with a chapter overlay + WebVTT captions. Poster + preload="none",
+ * no autoplay, so it plays with sound when the visitor presses play.
+ *
+ * Exactly one caption layer at a time:
+ * - Inline (and in our own shell fullscreen): the custom overlay shows; the native <track> is kept at mode
+ *   "hidden". WebKit (iOS Safari) re-runs its automatic caption selection when the media starts loading and
+ *   turns a `default` track back to "showing" (the iPhone double-caption bug), so the `default` attribute is
+ *   removed on hydration and the mode is re-asserted on every load / play / track change event.
+ * - Native video fullscreen (iOS webkitbeginfullscreen, or fullscreenchange on the <video>): the overlay
+ *   can't render there, so the native track is set to "showing", and back to "hidden" on exit.
+ * - Without JS: the `default` track stays in the static HTML, so native captions still show.
+ */
 export function RoomTour({ lang, copy }: { lang: "he" | "en"; copy: TourCopy }) {
   const shellRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const trackRef = useRef<HTMLTrackElement>(null);
+  const nativeFsRef = useRef(false);
   const [active, setActive] = useState<TourCaption>(TOUR_CAPTIONS[0]);
   const [activeIdx, setActiveIdx] = useState(0);
   const [started, setStarted] = useState(false);
@@ -29,12 +43,40 @@ export function RoomTour({ lang, copy }: { lang: "he" | "en"; copy: TourCopy }) 
   // Captions as a data: URL, so the <track> is present in the static HTML (works without JS too).
   const vttUrl = useMemo(() => `data:text/vtt;charset=utf-8,${encodeURIComponent(buildTourVtt(lang))}`, [lang]);
 
+  /** Native captions only in native video fullscreen; otherwise hidden (the overlay is driven from TOUR_CAPTIONS). */
+  const applyTrackMode = useCallback(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const mode: TextTrackMode = nativeFsRef.current ? "showing" : "hidden";
+    for (let i = 0; i < v.textTracks.length; i++) if (v.textTracks[i].mode !== mode) v.textTracks[i].mode = mode;
+  }, []);
+
+  useEffect(() => {
+    nativeFsRef.current = nativeVideoFs;
+    applyTrackMode();
+  }, [nativeVideoFs, applyTrackMode]);
+
+  // With JS the overlay replaces the default-on native captions: drop `default` so WebKit's automatic
+  // selection doesn't switch the track back on, and re-assert the mode whenever the browser changes it.
   useEffect(() => {
     const v = videoRef.current;
-    if (!v || !vttUrl) return;
-    const mode = nativeVideoFs ? "showing" : "hidden";
-    for (let i = 0; i < v.textTracks.length; i++) v.textTracks[i].mode = mode;
-  }, [vttUrl, nativeVideoFs]);
+    const t = trackRef.current;
+    if (!v) return;
+    if (t) {
+      t.removeAttribute("default");
+      t.default = false;
+    }
+    applyTrackMode();
+    const events = ["loadstart", "loadedmetadata", "loadeddata", "play", "playing"] as const;
+    events.forEach((e) => v.addEventListener(e, applyTrackMode));
+    v.textTracks.addEventListener("change", applyTrackMode);
+    v.textTracks.addEventListener("addtrack", applyTrackMode);
+    return () => {
+      events.forEach((e) => v.removeEventListener(e, applyTrackMode));
+      v.textTracks.removeEventListener("change", applyTrackMode);
+      v.textTracks.removeEventListener("addtrack", applyTrackMode);
+    };
+  }, [vttUrl, applyTrackMode]);
 
   useEffect(() => {
     const onFs = () => {
@@ -95,6 +137,12 @@ export function RoomTour({ lang, copy }: { lang: "he" | "en"; copy: TourCopy }) 
   const toggleShellFullscreen = async () => {
     const shell = shellRef.current;
     if (!shell) return;
+    // iPhone Safari has no element fullscreen: use the video's native fullscreen (native captions show there).
+    const v = videoRef.current as (HTMLVideoElement & { webkitEnterFullscreen?: () => void }) | null;
+    if (!shell.requestFullscreen && v?.webkitEnterFullscreen) {
+      v.webkitEnterFullscreen();
+      return;
+    }
     try {
       if (document.fullscreenElement) await document.exitFullscreen();
       if (document.fullscreenElement !== shell && !shellFs) await shell.requestFullscreen();
@@ -124,7 +172,6 @@ export function RoomTour({ lang, copy }: { lang: "he" | "en"; copy: TourCopy }) 
               poster={TOUR_VIDEO.poster}
               className={shellFs ? "w-full h-full object-contain" : "w-full aspect-[9/16] sm:aspect-video object-contain sm:object-cover max-h-[78vh] mx-auto bg-neutral-900"}
               controls
-              muted
               playsInline
               preload="none"
               controlsList="nofullscreen"
@@ -134,7 +181,7 @@ export function RoomTour({ lang, copy }: { lang: "he" | "en"; copy: TourCopy }) 
               onSeeked={onTimeUpdate}
               aria-describedby="tour-caption"
             >
-              {vttUrl ? <track key={lang} kind="captions" srcLang={lang} label={lang === "he" ? "עברית" : "English"} src={vttUrl} default /> : null}
+              {vttUrl ? <track ref={trackRef} key={lang} kind="captions" srcLang={lang} label={lang === "he" ? "עברית" : "English"} src={vttUrl} default /> : null}
             </video>
 
             {started && !nativeVideoFs ? (

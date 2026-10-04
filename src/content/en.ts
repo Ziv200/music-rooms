@@ -222,8 +222,8 @@ export const enThanks = {
 /** Existing site copy for the room tour (English). */
 export const enTour = {
   title: "A short walk through",
-  subtitle: "Muted walkthrough with brief labels — lighting, acoustics, instruments, control, and the Atmos seat.",
-  caption: "Silent tour · ~4 min · tap a label to jump",
+  subtitle: "Narrated walkthrough (in Hebrew) with brief English labels — lighting, acoustics, instruments, control, and the Atmos seat.",
+  caption: "Tour with sound · ~4 min · tap a label to jump",
   chaptersLabel: "Tour chapters",
   fullscreen: "Fullscreen",
   exitFullscreen: "Exit fullscreen",

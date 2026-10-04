@@ -24,13 +24,13 @@ export default function Page() {
       <H>What has been done</H>
       <P>
         Clear heading structure and reading order; full keyboard navigation with a visible focus indicator; descriptive alternative text for images; labeled form fields with announced error messages;
-        checked color contrast and text size; content that stays visible with reduced motion or without JavaScript; captions for the silent room-tour video; a responsive layout; and an accessibility
+        checked color contrast and text size; content that stays visible with reduced motion or without JavaScript; short Hebrew and English captions summarizing each part of the narrated room-tour video, which never plays on its own; a responsive layout; and an accessibility
         toolbar (the button in the corner of the screen) for text size, contrast, link highlighting, pausing animations and more. Your preferences are stored only in your browser.
       </P>
       <H>Known limitations</H>
       <P>
         Some parts may not yet be fully accessible. The latest review used automated testing tools and keyboard navigation; it has not yet included testing with screen readers such as NVDA or
-        VoiceOver. Some descriptions of on-site documentation photos are general, and the case study PDF is a tagged document that has not yet been checked with a screen reader. Please let me know
+        VoiceOver. Some descriptions of on-site documentation photos are general, and the case study PDF is a tagged document that has not yet been checked with a screen reader. The room-tour captions summarize the Hebrew narration; they are not a full transcript. Please let me know
         and I&apos;ll fix it.
       </P>
       <H>Contact the accessibility coordinator</H>
